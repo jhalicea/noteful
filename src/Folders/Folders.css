@@ -1,0 +1,27 @@
+aside {
+    text-align: center;
+    background-color: #add9f4;
+}
+
+#folders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #add9f4;
+    padding: 20px;
+}
+
+@media all and (min-width: 700px) {
+    aside {
+        flex: 1;
+        margin-bottom: 0;
+    }
+
+    #folders {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+}

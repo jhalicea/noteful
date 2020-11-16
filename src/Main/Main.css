@@ -1,0 +1,14 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media all and (min-width: 700px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex: 2;
+    }
+}

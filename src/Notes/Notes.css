@@ -1,0 +1,15 @@
+#notes {
+    background-color: #add9f4;
+}
+
+@media all and (min-width: 700px) {
+    section {
+        flex: 2;
+    }
+}
+
+@media all and (min-width: 1500px) {
+    section {
+        flex: 4;
+    }
+}

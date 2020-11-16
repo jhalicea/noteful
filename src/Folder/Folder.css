@@ -1,0 +1,7 @@
+.folder {
+    margin: 10px;
+    border: 1px black solid;
+    padding: 10px;
+    background-color: #476c9b;
+    cursor: pointer;
+}
