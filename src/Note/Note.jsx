@@ -1,54 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { format } from "date-fns";
 
-import './Note.css'
+import "./Note.css";
 
 export default class Note extends React.Component {
-  render() {
+  render(props) {
     return (
-      <>
-        <div className="note">
-          <h2>
-            <a href="#">Note 1</a>
-          </h2>
-          <div className="description">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              adipisci unde culpa? Eos perferendis perspiciatis placeat sit,
-              provident, suscipit nobis dignissimos dolor, deserunt incidunt
-              corrupti quod voluptatem! Unde, rerum deleniti!
-            </p>
-          </div>
-          <button>Delete</button>
+      <div id={this.props.note.id} className="note">
+        <h2>
+          <Link to={`/note/${this.props.note.id}`}>{this.props.note.name}</Link>
+        </h2>
+        <div className="date">
+          Modified {format(this.props.note.modified, "Do MMM YYYY")}
         </div>
-        <div className="note">
-          <h2>
-            <a href="#">Note 2</a>
-          </h2>
-          <div className="description">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              adipisci unde culpa? Eos perferendis perspiciatis placeat sit,
-              provident, suscipit nobis dignissimos dolor, deserunt incidunt
-              corrupti quod voluptatem! Unde, rerum deleniti!
-            </p>
-          </div>
-          <button>Delete</button>
+        <div className="description">
+          <p>{this.props.note.content}</p>
         </div>
-        <div className="note">
-          <h2>
-            <a href="#">Note 3</a>
-          </h2>
-          <div className="description">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-              adipisci unde culpa? Eos perferendis perspiciatis placeat sit,
-              provident, suscipit nobis dignissimos dolor, deserunt incidunt
-              corrupti quod voluptatem! Unde, rerum deleniti!
-            </p>
-          </div>
-          <button>Delete</button>
-        </div>
-      </>
+        <button>Delete</button>
+      </div>
     );
   }
 }

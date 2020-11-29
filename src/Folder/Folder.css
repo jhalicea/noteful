@@ -5,3 +5,7 @@
     background-color: #476c9b;
     cursor: pointer;
 }
+
+.selected {
+    background-color: #704c5e;
+}

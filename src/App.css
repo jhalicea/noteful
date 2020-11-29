@@ -8,6 +8,11 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: #add9f4;
+}
+
+p {
+    font-family: 'Xanh Mono', monospace;
 }
 
 h1 {
